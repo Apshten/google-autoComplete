@@ -1,4 +1,4 @@
-import re
+from utils import clear_string
 from collections import defaultdict
 from string_describe import StringDescribe
 
@@ -66,9 +66,7 @@ class Data:
         return self.__sentences_data.get_url(_id)
 
 
-def clear_string(string):
-    string = string.lower().replace("  ", " ")
-    return re.sub(r'[^a-z0-9 ]', '', string)
+data = Data()
 
 
 
